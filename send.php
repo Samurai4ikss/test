@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 // ===== Налаштування (зробіть БЕЗПЕЧНО!) =====
 // Рекомендовано задати через змінні оточення (наприклад у панелі хостингу)
-$BOT_TOKEN = getenv('TG_BOT_TOKEN') ?: 'PASTE_TELEGRAM_BOT_TOKEN';
-$CHAT_ID   = getenv('TG_CHAT_ID')   ?: 'PASTE_CHAT_ID';
+$BOT_TOKEN = getenv('TG_BOT_TOKEN') ?: '8131201272:AAFSTAxK5Kr-1HvP5iHPwGq-x-YNEojezm8';
+$CHAT_ID   = getenv('TG_CHAT_ID')   ?: '816561820';
 
 // Куди редиректити у разі не-AJAX запиту (без JS)
 $REDIRECT_SUCCESS = 'thank-you.html';
