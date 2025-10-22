@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Дякуємо за замовлення — VEGER VP3008PD</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; }
+    .gradient-bg { background-image: radial-gradient(1200px 600px at 10% 10%, rgba(16,185,129,.15), transparent 60%), radial-gradient(1000px 600px at 90% 0%, rgba(99,102,241,.15), transparent 60%), linear-gradient(180deg, #f8fafc 0%, #ffffff 40%, #ecfeff 100%); }
+    @media (prefers-color-scheme: dark) { .gradient-bg { background-image: radial-gradient(1200px 600px at 10% 10%, rgba(16,185,129,.25), transparent 60%), radial-gradient(1000px 600px at 90% 0%, rgba(99,102,241,.25), transparent 60%), linear-gradient(180deg, #020617 0%, #0b1220 40%, #0b1020 100%);} }
+  </style>
+</head>
+<body class="gradient-bg text-slate-900 dark:text-slate-100 min-h-screen flex items-center">
+  <main class="max-w-2xl mx-auto px-4 py-16 text-center">
+    <div class="mx-auto w-20 h-20 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    </div>
+    <h1 class="mt-6 text-3xl font-extrabold">Дякуємо за замовлення!</h1>
+    <p class="mt-2 text-slate-600 dark:text-slate-300">Ми отримали вашу заявку на <b>VEGER VP3008PD 30000mAh</b>. Менеджер зв’яжеться з вами найближчим часом для підтвердження деталей доставки.</p>
+
+    <div class="mt-6 flex items-center justify-center gap-3">
+      <a href="index.html" class="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-3 rounded-xl shadow-lg hover:shadow-xl transition">На головну</a>
+      <a href="privacy.html" class="inline-flex items-center gap-2 bg-white/85 dark:bg-white/10 border border-white/40 dark:border-white/10 px-5 py-3 rounded-xl shadow hover:shadow-lg transition">Політика конфіденційності</a>
+      <a href="terms.html" class="inline-flex items-center gap-2 bg-white/85 dark:bg-white/10 border border-white/40 dark:border-white/10 px-5 py-3 rounded-xl shadow hover:shadow-lg transition">Умови користування</a>
+    </div>
+
+    <p class="mt-6 text-sm text-slate-500">Ви будете автоматично перенаправлені на головну за <span id="sec">6</span> с.</p>
+  </main>
+
+  <script>
+    // Автоматичне перенаправлення на головну через 6 секунд
+    let s = 6; const el = document.getElementById('sec');
+    const t = setInterval(()=>{ s--; if(s<0){ clearInterval(t); window.location.href = 'index.html'; } else { el.textContent = s; } }, 1000);
+  </script>
+</body>
+</html>
